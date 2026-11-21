@@ -28,12 +28,12 @@ const Navbar = () => {
 
   return (
     <header className="relative z-40 -mx-4 border-b border-[#eee5ed] bg-[#fffdfa] sm:mx-[-5vw] md:mx-[-7vw] lg:mx-[-9vw]">
-      <div className="mx-auto flex min-h-19 max-w-360 items-center justify-between gap-4 px-4 sm:px-[5vw] md:px-[7vw] lg:px-[9vw]">
+      <div className="mx-auto flex min-h-19 max-w-360 items-center justify-between gap-4 px-4 sm:px-[5vw] md:px-[7vw] lg:px-[9vw] lg:grid lg:grid-cols-[minmax(0,1fr)_auto_minmax(0,1fr)]">
         <button
           type="button"
           onClick={() => setVisible(true)}
           aria-label="Open navigation menu"
-          className="grid h-10 w-10 place-items-center rounded-full text-[#59446c] transition hover:bg-[#f6edf5] sm:hidden"
+          className="grid h-10 w-10 place-items-center rounded-full text-[#59446c] transition hover:bg-[#f6edf5] lg:hidden"
         >
           <img src={assets.menu_icon} className="h-4.5 w-4.5" alt="" />
         </button>
@@ -42,11 +42,11 @@ const Navbar = () => {
           <img src={assets.logo} className="h-auto w-33 object-contain sm:w-39.5" alt="Mermaid Island" />
         </Link>
 
-        <nav aria-label="Main navigation" className="hidden items-center gap-7 lg:flex xl:gap-10">
+        <nav aria-label="Main navigation" className="hidden items-center gap-7 lg:mx-8 lg:flex lg:justify-self-center xl:mx-12 xl:gap-10">
           {links.map((link) => <NavLink key={link.to} to={link.to} end={link.to === '/'} className={linkClass}>{link.label}</NavLink>)}
         </nav>
 
-        <div className="ml-auto flex items-center gap-1 sm:gap-2">
+        <div className="ml-auto flex items-center gap-1 sm:gap-2 lg:ml-0 lg:justify-self-end">
           <button type="button" aria-label="Search products" className="grid h-10 w-10 place-items-center rounded-full transition hover:bg-[#f6edf5]">
             <img src={assets.search_icon} className="w-4.5" alt="" />
           </button>
@@ -71,7 +71,7 @@ const Navbar = () => {
         </div>
       </div>
 
-      <nav aria-label="Mobile navigation" className={`fixed inset-0 z-60 bg-[#fffdfa] transition-transform duration-300 ease-out sm:hidden ${visible ? 'translate-x-0' : 'translate-x-full'}`} aria-hidden={!visible}>
+      <nav aria-label="Mobile and tablet navigation" className={`fixed inset-0 z-60 bg-[#fffdfa] transition-transform duration-300 ease-out lg:hidden ${visible ? 'translate-x-0' : 'translate-x-full'}`} aria-hidden={!visible}>
         <div className="flex h-full flex-col">
           <div className="flex min-h-19 items-center justify-between border-b border-[#eee5ed] px-5">
             <Link to="/" onClick={closeMenu}><img src={assets.logo} className="w-36.25" alt="Mermaid Island" /></Link>

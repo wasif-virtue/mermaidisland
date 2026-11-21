@@ -54,10 +54,11 @@ const Navbar = () => {
                     <img onClick={()=>{setVisible(false)}} src={assets.dropdown_icon} className='h-4 rotate-180' alt="" />
                     <p>Back</p>
                 </div>
+                
                 <NavLink onClick={()=>{setVisible(false)}} className='py-2 pl-6 border cursor-pointer' to='/'>HOME</NavLink>
-                <NavLink onclick={()=>{setVisible(false)}} className='py-2 pl-6 border cursor-pointer' to='/collection'>COLLECTION</NavLink>
-                <NavLink onclick={()=>{setVisible(false)}} className='py-2 pl-6 border cursor-pointer' to='/about'>ABOUT</NavLink>
-                <NavLink onclick={()=>{setVisible(false)}} className='py-2 pl-6 border cursor-pointer' to='/contact'>CONTACT</NavLink>
+                <NavLink onClick={()=>{setVisible(false)}} className='py-2 pl-6 border cursor-pointer' to='/collection'>COLLECTION</NavLink>
+                <NavLink onClick={()=>{setVisible(false)}} className='py-2 pl-6 border cursor-pointer' to='/about'>ABOUT</NavLink>
+                <NavLink onClick={()=>{setVisible(false)}} className='py-2 pl-6 border cursor-pointer' to='/contact'>CONTACT</NavLink>
             </div>
         </div>
       

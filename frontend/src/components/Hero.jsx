@@ -16,7 +16,7 @@ const Hero = () => (
         <p className="mb-5 text-[10px] font-semibold uppercase tracking-[0.28em] text-[#9b779a] sm:text-xs">
           Your little everyday escape
         </p>
-        <h1 className="max-w-lg font-serif text-4xl leading-[1.08] tracking-[-0.035em] text-[#332a35] sm:text-5xl lg:text-6xl">
+        <h1 className="prata-regular max-w-lg font-serif text-4xl leading-[1.08] tracking-[-0.035em] text-[#332a35] sm:text-5xl lg:text-6xl">
           Find your own kind of <span className="text-[#80628f]">island magic.</span>
         </h1>
         <p className="mt-5 max-w-md text-sm leading-6 text-[#655b61] sm:text-base sm:leading-7">
